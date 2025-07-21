@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<h2>Interfaces for {{ ip }}</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Interface</th>
+      <th>Status</th>
+      <th>VLAN</th>
+      <th>Speed</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in interfaces %}
+    <tr>
+      <td>{{ i.portName }}</td>
+      <td>{{ i.status }}</td>
+      <td>{{ i.vlanId }}</td>
+      <td>{{ i.speed }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

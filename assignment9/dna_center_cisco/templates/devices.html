@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<h2>Network Devices</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Hostname</th>
+      <th>IP Address</th>
+      <th>Platform</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for d in devices %}
+    <tr>
+      <td>{{ d.hostname }}</td>
+      <td>{{ d.managementIpAddress }}</td>
+      <td>{{ d.platformId }}</td>
+      <td>{{ d.reachabilityStatus }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
