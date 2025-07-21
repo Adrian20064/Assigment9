@@ -79,3 +79,7 @@ def device_interfaces(request):
     dnac.get_auth_token()
     interfaces = dnac.get_device_interfaces(ip)
     return render(request, "interfaces.html", {"interfaces": interfaces, "ip": ip})
+
+def home(request):
+    return render(request, "home.html")
+

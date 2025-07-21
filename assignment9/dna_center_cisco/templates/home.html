@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %}
+<h2>Bienvenido al Cisco DNA Center Dashboard</h2>
+<p>Usa las siguientes opciones:</p>
+<ul>
+  <li><a href="{% url 'devices' %}">Ver dispositivos de red</a></li>
+  <li><a href="{% url 'token' %}">Ver token de autenticación</a></li>
+</ul>
+{% endblock %}
