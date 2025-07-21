@@ -7,6 +7,7 @@
       <th>IP Address</th>
       <th>Platform</th>
       <th>Status</th>
+      <th>Interfaces</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,14 @@
       <td>{{ d.managementIpAddress }}</td>
       <td>{{ d.platformId }}</td>
       <td>{{ d.reachabilityStatus }}</td>
+      <td>
+        <a
+          href="{% url 'interfaces' %}?ip={{ d.managementIpAddress }}"
+          class="btn btn-sm btn-primary"
+        >
+          Ver Interfaces
+        </a>
+      </td>
     </tr>
     {% endfor %}
   </tbody>
